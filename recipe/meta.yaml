@@ -14,11 +14,14 @@ build:
   number: 0
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
     # Only for testing
     - mongodb
+
+  build:
+    - {{ compiler('c') }}
 
   run:
     - python
