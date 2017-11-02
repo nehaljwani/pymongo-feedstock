@@ -11,12 +11,14 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
     - python
     - setuptools
+    # Only for testing
+    - mongodb
+
   run:
     - python
 
@@ -25,9 +27,6 @@ test:
     - bson
     - gridfs
     - pymongo
-  requires:  # [not win]
-    - mongodb  # [not win]
-    - setuptools  # [not win]
 
 about:
   home: https://github.com/mongodb/mongo-python-driver

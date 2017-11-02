@@ -15,3 +15,5 @@ python setup.py test
 
 # Terminate the forked process after the test suite exits
 kill `cat $PID_FILE_PATH`
+
+python setup.py install --single-version-externally-managed --record=record.txt
